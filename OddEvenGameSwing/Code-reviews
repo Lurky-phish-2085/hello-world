@@ -1,0 +1,8 @@
+CODE-REVIEWS
+
+- write explicit access modifiers and arrange your methods with the public ones first followed by the private methods
+- in OddOrEvenGame.java:5 - consider renaming Player p1 
+- in OddOrEvenGame.java:11 - code smell, Player fields are not initialized
+- I suggest separating the responsibility of NumberGenerator and make it really just generate number(s). It seems that you want to represent a number along with its parity, so I suggest creating a separate one - GeneratedNumber perhaps.
+- consider moving the field score to Player class since it's the player the owns the score not the game
+- minor: try replacing arrays with list so you won't have to deal with the low-level details of the collection
